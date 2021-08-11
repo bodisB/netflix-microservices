@@ -5,9 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @Entity
@@ -22,4 +21,7 @@ public class Video {
     private String name;
 
     private String url;
+
+    @Embedded
+    private RecommendationResult recommendationResult;
 }
